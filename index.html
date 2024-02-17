@@ -1,0 +1,417 @@
+<!doctype html>
+<html>
+
+<head>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ramos</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+    integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.syncfusion.com/ej2/dist/ej2.min.js" type="text/javascript"></script>
+    <script src="index.js"></script>
+  <script>
+    new WOW().init();
+
+
+    var chart = new ej.charts.Chart({
+            //Initializing Primary X Axis
+            primaryXAxis: {
+                valueType: 'Category',
+                title: 'Countries',
+            },
+            //Initializing Primary Y Axis
+             primaryYAxis: {
+                title: 'Medals in number'
+            },
+ 
+            //Initializing Chart Series
+            series: [
+                {
+                    type: 'Column',
+                    dataSource: [
+                        { country: "USA", medal: 50 },
+                        { country: "China", medal: 40 },
+                        { country: "Japan", medal: 70 },
+                        { country: "Australia", medal: 60 },
+                        { country: "France", medal: 30 },
+                    ],
+                    xName: 'country',
+                    yName: 'medal',
+                }
+            ],
+        });
+        chart.appendTo('#chart');
+    
+  </script>
+</head>
+
+<body>
+
+  <div id="chart"></div>
+
+  <nav class="bg-gray-800 rounded-md">
+    <div class="mx-auto px-2">
+      <div class="flex h-16 items-center ">
+        <div class="flex-1 ml-8">
+          <i class="fa fa-link text-xl text-white" aria-hidden="true"></i>
+          <a href="#" class="text-white py-4 font-extrabold text-2xl">ramos</a>
+        </div>
+        <div class="flex-1 bg-gray-700 rounded-lg">
+          <div class="flex space-x-4 justify-center">
+            <a href="#dashboard" class="text-gray-300 rounded-md px-7 py-3 text-sm font-medium"
+              aria-current="page">Dashboard</a>
+            <a href="#reports" class="text-gray-300 rounded-md px-7 py-3 text-sm font-medium">Reports</a>
+            <a href="#" class="text-gray-300 rounded-md px-7 py-3 text-sm font-medium">Documents</a>
+            <a href="#" class="text-gray-300 rounded-md px-7 py-3 text-sm font-medium">History</a>
+            <a href="#" class="text-gray-300 rounded-md px-7 py-3 text-sm font-medium">Settings</a>
+          </div>
+        </div>
+        <div class="flex-1 text-right mr-8">
+          <button class="mx-6 px-4 py-2 bg-white text-black rounded-lg">
+            Sign Up
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section id="dashboard" class="mx-auto my-52">
+    <div class="flex justify-center">
+      <div class="text-9xl font-medium text-gray-800">
+        <div class="ml-44 flex">
+          <i
+            class="fa fa-bolt wow animate__animated animate__zoomIn h-24 w-24 rounded-full bg-gray-300 pl-6 pt-4 mt-4 text-6xl text-red-400"></i>
+          <i
+            class="fa fa-line-chart wow animate__animated animate__zoomIn -ml-3 h-24 w-24 rounded-full bg-red-400 pl-3.5 pt-4 mt-4 text-6xl text-white"></i>
+          <p class="wow animate__animated animate__lightSpeedInLeft ml-8">Analytics</p>
+        </div>
+        <p class="wow animate__animated animate__slideInUp mb-8">that <span class="text-gray-400">helps</span> you</p>
+      </div>
+      <div>
+        <img src="assets/dashboard-laptop.PNG" class="wow animate__animated animate__zoomIn ml-4 -mt-14 h-80 w-max"
+          alt="logo image" />
+      </div>
+    </div>
+    <div class="ml-60 text-9xl font-medium text-gray-800">
+      <p class="wow animate__animated animate__slideInUp ml-56">shape <i
+          class="fa fa-signal wow animate__animated animate__zoomIn mx-1 -mt-4 h-24 w-24 rounded-full bg-yellow-500 pl-3 pt-4 text-5xl text-black"></i>
+        the future!</p>
+    </div>
+  </section>
+
+  <section id="reports" class="rounded-3xl bg-gray-300 p-24">
+    <div class="mx-2 mb-4 flex">
+      <div class="w-7/12 text-7xl font-bold text-gray-800 wow animate__animated animate__slideInUp">
+        <p class="ml-8">Your key to strategic</p>
+        <p class="ml-8">success through analytics</p>
+      </div>
+      <div class="w-5/12 text-3xl font-normal text-gray-800 wow animate__animated animate__slideInUp">
+        <p class="ml-8">Ready for exciting, instantaneous,</p>
+        <p class="ml-8">all-accessible insights in real time?</p>
+      </div>
+    </div>
+    <div class="flex">
+      <div class="mr-4 w-7/12 rounded-3xl bg-white">
+        <div class="flex">
+          <div class="w-3/6">
+            <button
+              class="ml-6 mt-6 rounded-lg bg-yellow-300 p-2 font-serif wow animate__animated animate__zoomIn">Setting
+              up reports</button>
+            <p class="ml-6 mt-12 text-5xl font-semibold">Fast and easy access to analytics</p>
+            <p class="mx-6 my-6">Lorem Ipsum has been the industry's standard.Lorem Ipsum has been the industry's
+              standard.Lorem Ipsum has been the industry's standard.</p>
+          </div>
+          <div class="my-6 mr-6 h-96 w-3/6 rounded-l-3xl outline outline-2 outline-slate-300">
+            <p class="m-2 text-2xl">Sales statistic</p>
+            <div class="flex">
+              <div class="m-1 w-1/2">
+                <div class="flex">
+                  <div class="m-3 w-1/3">
+                    <i
+                      class="fa fa-server wow animate__animated animate__zoomIn h-20 w-20 rounded-full bg-red-400 pl-5 pt-4 text-4xl text-white"></i>
+                  </div>
+                  <div class="m-1 w-2/3">
+                    <p class="font-bold text-xl text-gray-400">Total profit</p>
+                    <p class="text-4xl font-medium">$250,2K</p>
+                  </div>
+                </div>
+              </div>
+              <div class="m-1 w-1/2 rounded-xl bg-gray-300">
+                <p class="m-2 text-2xl">Visitors</p>
+                <hr class="mx-2" />
+                <p id="visitorCounter" class="mx-2 text-3xl font-medium"></p>
+              </div>
+            </div>
+            <div class="m-1 max-w-full h-48 bg-gray-500">
+              <div id="visitStats" class="w-full h-full">
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-5/12 rounded-3xl bg-gray-950">
+        <div class="mx mx-16 my-12 flex">
+          <div class="mx-auto w-1/2 rounded-xl bg-gray-900 px-8 py-16 outline outline-1">
+            <div class="w-full flex justify-center">
+              <i class="fa fa-server wow animate__animated animate__zoomIn text-4xl text-yellow-300"></i>
+            </div>
+            <div class="mt-4 flex justify-center">
+              <i
+                class="fa fa-user wow animate__animated animate__zoomIn h-20 w-20 rounded-full bg-gray-300 pl-5 pt-5 text-4xl text-red-400"></i>
+              <i
+                class="fa fa-user wow animate__animated animate__zoomIn -ml-3 h-20 w-20 rounded-full bg-red-400 pl-5 pt-5 text-4xl text-white"></i>
+            </div>
+          </div>
+          <div class="ml-2 p-4 w-1/2 rounded-xl bg-gray-900 outline outline-1">        
+            <p class="text-white text-3xl">
+              Transactions
+            </p>
+            <div class="flex justify-center mt-12">
+              <p id="transactionsCounter" class="text-white text-5xl"></p>
+            </div>
+
+          </div>
+        </div>
+        <div class="w-full m-2">
+          <div class="flex justify-center">
+            <p class="text-4xl text-white my-4">
+              Widget control
+            </p>
+          </div>
+          <div class="flex justify-center">
+            <p class="text-gray-400">Lorem Ipsum has been the industry's standard</p>
+          </div>
+          <div class="flex justify-center">
+            <p class="text-gray-400">Lorem Ipsum has been the industry's standard</p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <div class="mx-2 mt-14 flex justify-center">
+      <p class="ml-8 mt-6 text-lg">Up to</p>
+      <p class="ml-2 text-5xl font-bold">45%</p>
+      <div class="ml-3 wow animate__animated animate__slideInUp">
+        <p>Lorem Ipsum has been the industry's standard</p>
+        <p>Lorem Ipsum has been the industry's standard</p>
+        <p>Lorem Ipsum has been the industry's standard</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="documents" class="p-24">
+    <div class="flex justify-center">
+      <div class="text-9xl font-medium text-gray-800">
+        <p class="wow animate__animated animate__slideInUp mb-8">Maximize <span class="text-gray-400">efficiency</span>
+        </p>
+      </div>
+    </div>
+    <div class="ml-60 text-9xl font-medium text-gray-800">
+      <p class="wow animate__animated animate__slideInUp ml-56">with our intutive</p>
+    </div>
+    <div class="flex my-16 mx-24">
+      <div class="flex-1 justify-center">
+        <i
+          class="fa fa-bolt wow animate__animated animate__zoomIn h-32 w-32 rounded-full bg-gray-300 pl-9 pt-8 text-6xl text-red-400"></i>
+        <i
+          class="fa fa-line-chart wow animate__animated animate__zoomIn -ml-6 h-32 w-32 rounded-full bg-red-400 pl-9 pt-8 text-6xl text-white"></i>
+      </div>
+
+      <div class="text-7xl font-medium bg-yellow-500 rounded-full">
+        <p class="m-4 wow animate__animated animate__slideInRight">analytics server</p>
+      </div>
+
+    </div>
+    <hr />
+    <div class="flex text-4xl m-6">
+      <div class="flex-1 wow animate__animated animate__slideInUp">
+        <p>Lorem Ipsum has been the industry's standard</p>
+        <p>Lorem Ipsum has been the industry's standard</p>
+      </div>
+      <div>
+        <button class="bg-gray-400 text-black rounded-xl py-4 px-12 mx-4 wow animate__animated animate__zoomIn">Request
+          a demo</button>
+        <button class="bg-red-400 text-white rounded-xl py-4 px-12 mx-4 wow animate__animated animate__zoomIn">Start for
+          free</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="history" class="rounded-3xl bg-gray-300 p-24">
+    <div class="mb-4 flex">
+      <div class="w-7/12 text-5xl font-medium text-gray-800 wow animate__animated animate__slideInUp">
+        <p>Turning data into real</p>
+        <p>actions and ideas</p>
+      </div>
+    </div>
+    <div class="flex">
+      <div class="w-1/4 wow animate__animated animate__slideInUp">
+        <div class="flex bg-white rounded-full p-2 m-2">
+          <p class="flex-1 p-4 text-2xl">Instant Insights </p>
+          <i class="fa fa-add wow animate__animated animate__zoomIn rounded-full h-10 w-10 bg-gray-300 pl-3 pt-3 mt-2.5 mr-4 text-black"></i>
+        </div>
+        <div class="flex bg-white rounded-full p-2 m-2">
+          <p class="flex-1 p-4 text-2xl">AI technology </p>
+          <i class="fa fa-add wow animate__animated animate__zoomIn rounded-full h-10 w-10 bg-gray-300 pl-3 pt-3 mt-2.5 mr-4 text-black"></i>
+        </div>
+        <div class="flex bg-white rounded-full p-2 m-2">
+          <p class="flex-1 p-4 text-2xl">Easy intergration </p>
+          <i class="fa fa-add wow animate__animated animate__zoomIn rounded-full h-10 w-10 bg-gray-300 pl-3 pt-3 mt-2.5 mr-4 text-black"></i>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="animationContainer" class="flex justify-center">
+      <p class="text-red-400 text-[550px] animate-write-left-to-right -mt-32 -mb-40">Ramos</p>
+    </div>
+
+  </section>
+
+  <section id="settings" class="p-24">
+    <div class="flex justify-center">
+      <div class="text-9xl font-medium text-gray-800">
+        <p class="wow animate__animated animate__slideInUp mb-8">We give you full</p>
+        <p class="wow animate__animated animate__slideInUp mb-8"><span class="text-gray-400">Control</span> over you
+          data</p>
+      </div>
+    </div>
+    <div class="flex m-4">
+      <div class="w-1/2 rounded-3xl bg-gray-300 m-4 P-4">
+        <div class="flex justify-center h-24 w-auto bg-gray-800 mx-32 my-6 wow animate__animated animate__slideInUp"></div>
+        <div class="flex justify-center">
+          <p class="ml-6 mt-12 text-5xl font-semibold">Improved customer service</p>
+        </div>
+        <div class="flex justify-center my-4">
+          <div class="items-center">
+            <div class="flex justify-center">
+              <p class="text-xl font-base">Analytics helps optimze service processes by</p>
+            </div>
+            <div class="flex justify-center">
+              <p class="text-xl font-base">providing information on how to improve interactions</p>
+            </div>
+            <div class="flex justify-center">
+              <p class="text-xl font-base">with customers and increase their satisfaction.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="w-1/2 rounded-3xl bg-gray-300 m-4">
+        <div class="flex justify-center h-24 w-auto bg-gray-800 mx-32 my-6 wow animate__animated animate__slideInUp"></div>
+        <div class="flex justify-center">
+          <p class="ml-6 mt-12 text-5xl font-semibold">Monioring key indicators</p>
+        </div>
+        <div class="flex justify-center my-4">
+          <div class="items-center">
+            <div class="flex justify-center">
+              <p class="text-xl font-base">Analytics platforms allow bussineses to track</p>
+            </div>
+            <div class="flex justify-center">
+              <p class="text-xl font-base">KPI's on important toolfor measuring success</p>
+            </div>
+            <div class="flex justify-center">
+              <p class="text-xl font-base">and achieving goals.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="my-32">
+      <div class="flex justify-center">
+        <i
+          class="fa fa-link wow animate__animated animate__zoomIn -ml-3 h-24 w-24 rounded-3xl bg-red-400 pl-3.5 pt-4 mt-4 text-6xl text-white"></i>
+      </div>
+      <div class="flex justify-center my-8">
+        <p class="text-9xl font-medium">Get Started</p>
+      </div>
+      <div class="flex justify-center wow animate__animated animate__slideInUp">
+        <p class="text-xl font-base">Turn information into advantage! Start using</p>
+      </div>
+      <div class="flex justify-center wow animate__animated animate__slideInUp">
+        <p class="text-xl font-base">Ramos today. Sign up for a free trial. </p>
+      </div>
+      <div class="flex justify-center my-8">
+        <button class="bg-gray-400 text-black rounded-xl py-4 px-12 mx-4 wow animate__animated animate__zoomIn">Request
+          a demo</button>
+        <button class="bg-red-400 text-white rounded-xl py-4 px-12 mx-4 wow animate__animated animate__zoomIn">Start for
+          free</button>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="contact" class="rounded-b-3xl bg-gray-900 p-24">
+    <div class="flex wow animate__animated animate__slideInUp">
+      <div class="flex-1">
+        <div class="flex">
+          <p class="mx-2 text-gray-400">About</p>
+          <p class="mx-2 text-gray-400">Why Us</p>
+          <p class="mx-2 text-gray-400">Platform</p>
+          <p class="mx-2 text-gray-400">Pricing</p>
+          <p class="mx-2 text-gray-400">Contacts</p>
+        </div>
+      </div>
+      <div class="text-right items-right">
+        <p class="text-white text-5xl flex text-right"> hello@ramos.com</p>
+      </div>
+    </div>
+
+    <hr class="mx-2 my-24" />
+
+    <div class="flex wow animate__animated animate__slideInUp">
+      <div class="flex-1">
+        <div class="flex">
+          <div class="mr-12">
+            <p class="text-white text-lg font-medium">Warrensville Heights</p>
+            <p class="text-gray-400 text-base">14418 Vineyard Drive, INC</p>
+            <p class="text-gray-400 text-base">44128</p>
+          </div>
+          <div class="mx-12">
+            <p class="text-white text-lg font-medium">Saint Louis</p>
+            <p class="text-gray-400 text-base">1366 Penn Street</p>
+            <p class="text-gray-400 text-base">63101</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-white p-4">
+        <p class="py-2">LinkedIn</p>
+        <p class="py-2">Instagram</p>
+        <p class="py-2">Facebook</p>
+      </div>
+    </div>
+    <div class="flex wow animate__animated animate__slideInUp">
+      <div class="flex-none">
+        <p class="text-white text-9xl">Ramos <span class="-ml-9">&reg;</span></p>
+      </div>
+      <div class="flex-1 mt-16">
+        <div class="flex justify-center">
+          <p class="mx-2 text-gray-400">Privacy policy</p>
+          <p class="mx-2 text-gray-400">License agreement</p>
+        </div>
+      </div>
+      <div class="flex mt-16 ">
+        <img src="assets//social-qr.PNG" class="wow animate__animated animate__zoomIn h-32 w-32 rounded-3xl -mt-12"
+          alt="logo image" />
+      </div>
+    </div>
+
+  </section>
+
+</body>
+
+</html>
