@@ -105,10 +105,15 @@ const loadChartInsightsStatsGraph = () => {
 };
 
 const isVisible = (elementId) => {
-  var counterElement = document.getElementById(elementId);
-  var position = counterElement.getBoundingClientRect();
+  var element = document.getElementById(elementId);
+  var position = element.getBoundingClientRect();
 
-  if (position.top >= 0 && position.bottom <= window.innerHeight) {
+  if (
+    position.top >= 0 &&
+    position.bottom <= window.innerHeight &&
+    !element.classList.contains("already-animated")
+  ) {
+    element.classList.add("already-animated");
     return true;
   }
   return false;
