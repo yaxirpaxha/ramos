@@ -6,19 +6,22 @@
     html {
       scroll-behavior: smooth;
     }
+
     #text-container {
-        overflow: hidden;
+      overflow: hidden;
     }
+
     #animated-text {
-        width: 0;
-        white-space: nowrap;
-        overflow: hidden;
-        animation: typing 1s linear forwards;
+      width: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 1s linear forwards;
     }
+
     @keyframes typing {
-        to {
-            width: 100%;
-        }
+      to {
+        width: 100%;
+      }
     }
   </style>
   <meta charset="UTF-8">
@@ -150,7 +153,8 @@
                     <i class="fa fa-ban wow animate__animated animate__zoomIn text-xl text-white mx-2"></i>
                   </div>
 
-                  <p class="mr-6 mt-2 text-lg font-medium text-white">+ <span class="wow" id="visitorRateCounter"></span>%</p>
+                  <p class="mr-6 mt-2 text-lg font-medium text-white">+ <span class="wow"
+                      id="visitorRateCounter"></span>%</p>
                 </div>
 
               </div>
@@ -280,7 +284,8 @@
       </div>
 
       <div id="text-container" class="flex justify-center">
-        <p id="animated-text" class="wow text-orange-600 text-[320px] animate-write-left-to-right -mt-24 -mb-24">Ramos</p>
+        <p id="animated-text" class="wow text-orange-600 text-[320px] animate-write-left-to-right -mt-24 -mb-24">Ramos
+        </p>
       </div>
 
     </section>
@@ -300,7 +305,7 @@
               <div class="flex justify-center">
                 <p class="text-sm py-2">Conversion rate</p>
               </div>
-              
+
               <div class="flex">
                 <div class="w-1/4">
                 </div>
@@ -325,7 +330,7 @@
               <img src="assets//visitors-placeholder.PNG" class="mt-4" alt="visitor placeholder" />
             </div>
           </div>
-          
+
           <div class="flex justify-center">
             <p class="ml-6 mt-12 text-2xl font-semibold">Improved customer service</p>
           </div>
@@ -353,9 +358,11 @@
               <div class="py-4 w-2/5">
                 <p class="text-gray-400 font-medium text-sm">Total profit</p>
                 <p>$ 264.2K</p>
-                <button class="rounded-lg bg-yellow-300 p-1 mt-6 text-sm font-serif wow animate__animated animate__zoomIn shadow-md">Data visualization</button>
+                <button
+                  class="rounded-lg bg-yellow-300 p-1 mt-6 text-sm font-serif wow animate__animated animate__zoomIn shadow-md">Data
+                  visualization</button>
               </div>
-              <div class=" w-3/5 mx-4">
+              <div>
                 <div id="insightsStats">
                   <canvas class="wow" id="insightsStatsChart"></canvas>
                 </div>
@@ -465,9 +472,7 @@
       </div>
 
     </section>
-
   </div>
-
 </body>
 
 </html>
