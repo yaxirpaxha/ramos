@@ -6,6 +6,20 @@
     html {
       scroll-behavior: smooth;
     }
+    #text-container {
+        overflow: hidden;
+    }
+    #animated-text {
+        width: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: typing 1s linear forwards;
+    }
+    @keyframes typing {
+        to {
+            width: 100%;
+        }
+    }
   </style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -118,12 +132,12 @@
                 <div class="flex-none w-6/12 m-1 p-2 rounded-xl bg-gray-100">
                   <p class="text-sm font-medium">Visitors</p>
                   <hr class="bg-green-600" />
-                  <p class="text-lg font-medium"> <span id="visitorCounter"></span> K</p>
+                  <p class="text-lg font-medium"> <span class="wow" id="visitorCounter"></span> K</p>
                 </div>
               </div>
               <div class="m-1 max-w-full h-32">
                 <div id="visitStats">
-                  <canvas id="visitStatsChart"></canvas>
+                  <canvas class="wow" id="visitStatsChart"></canvas>
                 </div>
               </div>
               <div class="flex">
@@ -136,7 +150,7 @@
                     <i class="fa fa-ban wow animate__animated animate__zoomIn text-xl text-white mx-2"></i>
                   </div>
 
-                  <p class="mr-6 mt-2 text-lg font-medium text-white">+ <span id="visitorRateCounter"></span>%</p>
+                  <p class="mr-6 mt-2 text-lg font-medium text-white">+ <span class="wow" id="visitorRateCounter"></span>%</p>
                 </div>
 
               </div>
@@ -162,7 +176,7 @@
                 Transactions
               </p>
               <div class="flex mt-8">
-                <p class="text-white text-3xl"><span id="transactionsCounter"></span> K</p>
+                <p class="text-white text-3xl"><span class="wow" id="transactionsCounter"></span> K</p>
               </div>
 
             </div>
@@ -265,8 +279,8 @@
 
       </div>
 
-      <div id="animationContainer" class="flex justify-center">
-        <p class="text-orange-600 text-[340px] animate-write-left-to-right -mt-24 -mb-24">Ramos</p>
+      <div id="text-container" class="flex justify-center">
+        <p id="animated-text" class="wow text-orange-600 text-[320px] animate-write-left-to-right -mt-24 -mb-24">Ramos</p>
       </div>
 
     </section>
@@ -343,7 +357,7 @@
               </div>
               <div class=" w-3/5 mx-4">
                 <div id="insightsStats">
-                  <canvas id="insightsStatsChart"></canvas>
+                  <canvas class="wow" id="insightsStatsChart"></canvas>
                 </div>
               </div>
             </div>

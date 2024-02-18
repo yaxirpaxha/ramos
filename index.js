@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", function () {});
+
 window.addEventListener("scroll", () => {
   if (isVisible("transactionsCounter")) {
     startCounterWithAnimation("transactionsCounter", 43);
@@ -16,38 +18,18 @@ window.addEventListener("scroll", () => {
   }
 });
 
-const loadChartInsightsStatsGraph = () => {
-  const data = {
-    labels: ["2021", "2020", "2019", "2018", "2017"],
-    datasets: [
-      {
-        label: "insights",
-        data: [100, 400, 100, 300, 200],
-        backgroundColor: ["rgb(229 231 235)", "rgb(255, 165, 0)", "rgb(229 231 235)", "rgb(229 231 235)", "rgb(229 231 235)"],
-        borderWidth: 0,
-        barPercentage: 0.5,
-      },
-    ],
-  };
+const startCounterWithAnimation = (elementId, targetNumber) => {
+  var counterElement = document.getElementById(elementId);
+  var duration = 4000; // Duration of the animation in milliseconds
+  var interval = duration / targetNumber;
+  var currentNumber = 30;
 
-  const config = {
-    type: "bar",
-    data: data,
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true,
-          display: false,
-        },
-      },
-      plugins: {
-        legend: false,
-      },
-    },
-  };
-
-  const ctx = document.getElementById("insightsStatsChart").getContext("2d");
-  const insightsStatsChart = new Chart(ctx, config);
+  var counterInterval = setInterval(function () {
+    counterElement.textContent = ++currentNumber;
+    if (currentNumber >= targetNumber) {
+      clearInterval(counterInterval);
+    }
+  }, interval);
 };
 
 const loadChartVisitorRateGraph = () => {
@@ -84,18 +66,44 @@ const loadChartVisitorRateGraph = () => {
   const visitStatsChart = new Chart(ctx, config);
 };
 
-const startCounterWithAnimation = (elementId, targetNumber) => {
-  var counterElement = document.getElementById(elementId);
-  var duration = 4000; // Duration of the animation in milliseconds
-  var interval = duration / targetNumber;
-  var currentNumber = 30;
+const loadChartInsightsStatsGraph = () => {
+  const data = {
+    labels: ["2021", "2020", "2019", "2018", "2017"],
+    datasets: [
+      {
+        label: "insights",
+        data: [100, 400, 100, 300, 200],
+        backgroundColor: [
+          "rgb(229 231 235)",
+          "rgb(255, 165, 0)",
+          "rgb(229 231 235)",
+          "rgb(229 231 235)",
+          "rgb(229 231 235)",
+        ],
+        borderWidth: 0,
+        barPercentage: 0.5,
+      },
+    ],
+  };
 
-  var counterInterval = setInterval(function () {
-    counterElement.textContent = ++currentNumber;
-    if (currentNumber >= targetNumber) {
-      clearInterval(counterInterval);
-    }
-  }, interval);
+  const config = {
+    type: "bar",
+    data: data,
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true,
+          display: false,
+        },
+      },
+      plugins: {
+        legend: false,
+      },
+    },
+  };
+
+  const ctx = document.getElementById("insightsStatsChart").getContext("2d");
+  const insightsStatsChart = new Chart(ctx, config);
 };
 
 const isVisible = (elementId) => {
