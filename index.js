@@ -1,5 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {});
-
 window.addEventListener("scroll", () => {
   if (isVisible("transactionsCounter")) {
     startCounterWithAnimation("transactionsCounter", 43);
