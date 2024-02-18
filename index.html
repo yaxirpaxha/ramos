@@ -7,10 +7,6 @@
       scroll-behavior: smooth;
     }
 
-    #text-container {
-      overflow: hidden;
-    }
-
     #animated-text {
       width: 0;
       white-space: nowrap;
@@ -76,7 +72,7 @@
         <div class="text-8xl font-medium text-gray-800">
           <div class="ml-44 flex">
             <i
-              class="fa fa-bolt wow animate__animated animate__zoomIn h-16 w-16 rounded-full bg-gray-300 pl-6 pt-4 mt-4 text-2xl text-orange-600"></i>
+              class="fa fa-bolt wow animate__animated animate__zoomIn h-16 w-16 rounded-full bg-gray-100 pl-6 pt-4 mt-4 text-2xl text-orange-600"></i>
             <i
               class="fa fa-line-chart wow animate__animated animate__zoomIn -ml-3 h-16 w-16 rounded-full bg-orange-600 pl-6 pt-4 mt-4 text-2xl text-white"></i>
             <p class="wow animate__animated animate__lightSpeedInLeft ml-2">Analytics</p>
@@ -170,7 +166,7 @@
               </div>
               <div class="mt-4 flex justify-center">
                 <i
-                  class="fa fa-user wow animate__animated animate__zoomIn h-10 w-10 rounded-full bg-gray-300 pl-3 pt-3 text-sm text-orange-600"></i>
+                  class="fa fa-user wow animate__animated animate__zoomIn h-10 w-10 rounded-full bg-gray-100 pl-3 pt-3 text-sm text-orange-600"></i>
                 <i
                   class="fa fa-user wow animate__animated animate__zoomIn -ml-3 h-10 w-10 rounded-full bg-orange-600 pl-3 pt-3 text-sm text-white"></i>
               </div>
@@ -227,7 +223,7 @@
       <div class="flex my-16 mx-4">
         <div class="flex-1 justify-center">
           <i
-            class="fa fa-bolt wow animate__animated animate__zoomIn h-28 w-28 rounded-full bg-gray-300 pl-9 pt-9 text-4xl text-orange-600"></i>
+            class="fa fa-bolt wow animate__animated animate__zoomIn h-28 w-28 rounded-full bg-gray-100 pl-9 pt-9 text-4xl text-orange-600"></i>
           <i
             class="fa fa-line-chart wow animate__animated animate__zoomIn -ml-6 h-28 w-28 rounded-full bg-orange-600 pl-9 pt-9 text-4xl text-white"></i>
         </div>
@@ -245,7 +241,7 @@
         </div>
         <div>
           <button
-            class="bg-gray-400 text-black rounded-xl py-4 px-6 wow animate__animated animate__zoomIn shadow-md text-sm">Request
+            class="bg-gray-200 text-black rounded-xl py-4 px-6 wow animate__animated animate__zoomIn shadow-md text-sm">Request
             a demo</button>
           <button
             class="bg-orange-600 text-white rounded-xl py-4 px-6 wow animate__animated animate__zoomIn shadow-md text-sm">Start
@@ -255,36 +251,52 @@
       </div>
     </section>
 
-    <section id="history" class="rounded-3xl bg-gray-300 p-10">
-      <div class="mb-4 flex">
-        <div class="w-7/12 text-2xl font-medium text-gray-800 wow animate__animated animate__slideInUp">
-          <p>Turning data into real</p>
-          <p>actions and ideas</p>
-        </div>
-      </div>
+    <section id="history" class="rounded-3xl bg-gray-100 py-10 pl-10">
       <div class="flex">
-        <div class="w-1/3 wow animate__animated animate__slideInUp">
-          <div class="flex bg-white rounded-full m-2">
-            <p class="flex-1 p-4 text-lg">Instant Insights </p>
-            <i
-              class="fa fa-add wow animate__animated animate__zoomIn rounded-full h-10 w-10 bg-gray-300 pl-3 pt-3 mt-2.5 mr-4 text-black"></i>
+        <div class="w-1/3 z-10">
+          <div class="mb-4 flex">
+            <div class="text-2xl font-medium text-gray-800 wow animate__animated animate__slideInUp">
+              <p>Turning data into real</p>
+              <p>actions and ideas</p>
+            </div>
           </div>
-          <div class="flex bg-white rounded-full m-2">
-            <p class="flex-1 p-4 text-lg">AI technology </p>
-            <i
-              class="fa fa-add wow animate__animated animate__zoomIn rounded-full h-10 w-10 bg-gray-300 pl-3 pt-3 mt-2.5 mr-4 text-black"></i>
+
+          <div class="my-16">
+
+            <div class="flex bg-white rounded-full m-2  wow animate__animated animate__slideInUp">
+              <p class="flex-1 p-4 text-lg">Instant Insights </p>
+              <i
+                class="fa fa-add wow animate__animated animate__zoomIn rounded-full h-10 w-10 bg-gray-100 pl-3 pt-3 mt-2.5 mr-4 text-black"></i>
+            </div>
+            <div class="flex bg-white rounded-full m-2  wow animate__animated animate__slideInUp">
+              <p class="flex-1 p-4 text-lg">AI technology </p>
+              <i
+                class="fa fa-add wow animate__animated animate__zoomIn rounded-full h-10 w-10 bg-gray-100 pl-3 pt-3 mt-2.5 mr-4 text-black"></i>
+            </div>
+            <div class="flex bg-white rounded-full m-2  wow animate__animated animate__slideInUp">
+              <p class="flex-1 p-4 text-lg">Easy intergration </p>
+              <i
+                class="fa fa-add wow animate__animated animate__zoomIn rounded-full h-10 w-10 bg-gray-100 pl-3 pt-3 mt-2.5 mr-4 text-black"></i>
+            </div>
+
           </div>
-          <div class="flex bg-white rounded-full m-2">
-            <p class="flex-1 p-4 text-lg">Easy intergration </p>
-            <i
-              class="fa fa-add wow animate__animated animate__zoomIn rounded-full h-10 w-10 bg-gray-300 pl-3 pt-3 mt-2.5 mr-4 text-black"></i>
-          </div>
+
+        </div>
+        <div class="relative block overflow-hidden inline-block">
+          <img src="assets/stats-desktop.PNG" class="wow animate__animated animate__zoomIn ml-32 rounded-3xl z-20"
+            alt="desktop dashboard " />
+          <img src="assets/stats-mobile.PNG"
+            class="wow animate__animated animate__slideInUp rounded-3xl -mt-72 ml-12 z-50 h-96 w-52"
+            alt="desktop dashboard " />
         </div>
 
       </div>
-
+      <!-- <div class="flex justify-center">
+        <img src="assets/stats-mobile.PNG" class="wow animate__animated animate__slideInUp rounded-3xl -mt-72 -ml-14 z-50 h-96 w-52"
+        alt="desktop dashboard " />
+      </div> -->
       <div id="text-container" class="flex justify-center">
-        <p id="animated-text" class="wow text-orange-600 text-[320px] animate-write-left-to-right -mt-24 -mb-24">Ramos
+        <p id="animated-text" class="wow text-orange-600 text-[320px] animate-write-left-to-right -mt-60 -mb-24">Ramos
         </p>
       </div>
 
@@ -299,7 +311,7 @@
         </div>
       </div>
       <div class="flex m-4">
-        <div class="w-1/2 rounded-3xl bg-gray-300 m-4 p-4">
+        <div class="w-1/2 rounded-3xl bg-gray-100 m-4 p-4">
           <div class="flex mx-16 my-2 wow animate__animated animate__slideInUp">
             <div class="bg-white rounded-2xl px-8 h-52 opacity-60">
               <div class="flex justify-center">
@@ -328,7 +340,7 @@
               </div>
               <p class="text-2xl font-medium">$131,2K</p>
               <div class="relative">
-                <div id="progressbar" class="overflow-hidden h-1 mb-2 text-xs flex rounded bg-gray-400">
+                <div id="progressbar" class="overflow-hidden h-1 mb-2 text-xs flex rounded bg-gray-200">
                   <div style="width: 33%"
                     class="progressbar shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500">
                   </div>
@@ -362,7 +374,7 @@
           </div>
 
         </div>
-        <div class="w-1/2 rounded-3xl bg-gray-300 m-4">
+        <div class="w-1/2 rounded-3xl bg-gray-100 m-4">
           <div class="bg-white mx-4 my-6 px-2 py-8 wow animate__animated animate__slideInUp rounded-2xl">
             <div class="flex">
               <i class="fa fa-line-chart wow animate__animated animate__zoomIn text-sm text-black"> Insights</i>
@@ -417,7 +429,7 @@
         </div>
         <div class="flex justify-center my-8">
           <button
-            class="bg-gray-400 text-black rounded-xl py-4 px-8 mr-2 wow animate__animated animate__zoomIn shadow-md text-sm">Request
+            class="bg-gray-200 text-black rounded-xl py-4 px-8 mr-2 wow animate__animated animate__zoomIn shadow-md text-sm">Request
             a demo</button>
           <button
             class="bg-orange-600 text-white rounded-xl py-4 px-8 wow animate__animated animate__zoomIn shadow-md text-sm">Start
